@@ -1,0 +1,279 @@
+body {
+    margin-top: 0.1px;
+    margin-bottom: 0.1px;
+    background: none;
+    overflow: hidden;
+}
+
+.full {
+
+    background: linear-gradient(
+            rgba(0, 0, 0, 0.15),
+            rgba(0, 0, 0, 0.15)
+    ),
+    url(../img/bgs/background_solid_faded_47331_2560x1440.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+
+.second-fullscreen-bg {
+    background:
+            linear-gradient(
+            rgba(0, 0, 0, 0.15),
+            rgba(0, 0, 0, 0.15)
+    ),
+    url(../img/bgs/background_solid_faded_47331_2560x1440.jpg) no-repeat center center fixed;
+    opacity: 0.5;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.third-fullscreen-bg {
+    background:
+            linear-gradient(
+                    rgba(0, 0, 0, 0.15),
+                    rgba(0, 0, 0, 0.15)
+            ),
+            url(../img/bgs/background_solid_spot_light_65990_3840x2400.jpg) no-repeat center center fixed;
+    opacity: 1;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.fullscreen-layer {
+    background-color: darkgray;
+    opacity: 0.7;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 10%;
+}
+
+
+/**------------------------------------------------
+SECTIONS
+ ------------------------------------------------*/
+
+.row {
+    background-color: transparent;
+}
+
+
+.pull-down {
+    margin-top: 50px;
+}
+.pull-extra-down {
+    margin-top: 150px;
+}
+
+.pull-up {
+    margin-top: -50px;
+}
+
+
+
+
+
+
+/**------------------------------------------------
+TYPOGRAPHY
+ ------------------------------------------------*/
+
+.fat {
+    font-weight: 700;
+}
+
+
+
+
+
+
+/*------------------------------------------------
+TRANSITION FADING IN AND OUT FOR PAGES
+------------------------------------------------ */
+
+
+/*
+Overlaying one image on top of the other
+ */
+.bottom-image {
+    position:relative;
+    z-index: 1;
+}
+
+.top-image {
+    position:absolute;
+    z-index: 2;
+}
+
+
+/*------------------------------------------------
+WEATHER ICONS
+ ------------------------------------------------*/
+
+canvas {
+    display: inline-block;
+    margin-left: 8px;
+    margin-top: 8px;
+}
+.weather-icons ul {
+    padding-top: 13px;
+    margin: auto auto;
+
+}
+.weather-icons ul li {
+    font-size: 0.5em;
+    font-weight: 700;
+    list-style: none;
+    margin-left: 85px;
+    min-width: 500px;
+    text-align: left;
+}
+
+/* Place the icon to the left of the text*/
+.icon-humidity {
+    background-image: url(../img/weather/icon_humidity-128x128.png);
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 128px; /* Or size of icon + spacing */
+    margin-top: 15px;
+    width: 128px;
+    height: 128px;
+}
+
+.icon-temperature {
+    background-image: url(../img/weather/icon_temperature-128x128.png);
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 128px; /* Or size of icon + spacing */
+    margin-top: 15px;
+    width: 128px;
+    height: 128px;
+}
+
+.icon-wind {
+    background-image: url(../img/weather/icon_wind-128x128.png);
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 128px; /* Or size of icon + spacing */
+    margin-top: 15px;
+    width: 128px;
+    height: 128px;
+}
+
+
+
+
+/*------------------------------------------------
+FULLSCREEN VIDEO
+ ------------------------------------------------*/
+
+.fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.fullscreen-bg__video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background:
+            linear-gradient(
+                    rgba(0, 0, 0, 0.15),
+                    rgba(0, 0, 0, 0.15)
+            );
+}
+
+@media (max-width: 1920px) {
+    .fullscreen-bg {
+        /*background: url('http://dev2.slicejack.com/fullscreen-video-demo/img/videoframe.jpg') center center / cover no-repeat;*/
+    }
+
+    .fullscreen-bg__video {
+        display: none;
+    }
+}
+
+
+
+/* .modal-fullscreen */
+
+.fullscreen-modal-video {
+    width:100%;
+    margin: auto;
+}
+.modal-fullscreen {
+    background: transparent;
+}
+.modal-fullscreen .modal-content {
+    background: transparent;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.modal-backdrop.modal-backdrop-fullscreen {
+    background: #ffffff;
+}
+.modal-backdrop.modal-backdrop-fullscreen.in {
+    opacity: .97;
+    filter: alpha(opacity=97);
+}
+
+/* .modal-fullscreen size: we use Bootstrap media query breakpoints */
+
+.modal-fullscreen .modal-dialog {
+    margin: 0;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    padding: 0;
+}
+
+
+@media (min-width: 768px) {
+    .modal-fullscreen .modal-dialog {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .modal-fullscreen .modal-dialog {
+        width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .modal-fullscreen .modal-dialog {
+        width: 1920px;/*original 1170px*/
+    }
+}
+

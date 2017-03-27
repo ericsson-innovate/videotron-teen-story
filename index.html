@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html class="full" lang="en">
+<!-- Make sure the <html> tag is set to the .full CSS class. Change the background image in the full.css file. -->
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Ma Vie Branch&eacute;e</title>
+
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,600,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/fontFaces.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/menubars.css" rel="stylesheet">
+    <link href="css/first.css" rel="stylesheet">
+    <link href="css/second.css" rel="stylesheet">
+    <link href="css/third.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+<!-------------------------------------------
+FULLSCREEN BACKGROUND VIDEO
+-------------------------------------------->
+
+<div class="fullscreen-bg hidden">
+
+    <video loop muted autoplay poster="" class="fullscreen-bg__video">
+        <source src="video/Snowy_Flower_4K_Living_Background.mp4" type="video/mp4">
+    </video>
+
+</div>
+
+
+
+<!-------------------------------------------
+FULLSCREEN MODAL VIDEO
+-------------------------------------------->
+<div class="modal modal-fullscreen fade" id="modal-fullscreen" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="fullscreen-modal-video">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <video id="video1" controls>
+                            <source src="video/pan_movie.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-------------------------------------------
+WAKEUP and GOODBYE AUDIO
+-------------------------------------------->
+<audio id="wakeup-sound" src="sounds/wakeup.mp3" type="audio/mp3" style="display:none;"></audio>
+<audio id="goodbye-sound" src="sounds/wakeup.mp3" type="audio/mp3" style="display:none;"></audio>
+
+
+
+<!-------------------------------------------
+SPOTIFY
+-------------------------------------------->
+
+<audio id="audio" preload="auto" tabindex="0" controls="" type="audio/mpeg" style="display:none;"></audio>
+
+<!-------------------------------------------
+INCOMING MESSAGE MODAL
+-------------------------------------------->
+<div class="modal fade" tabindex="-1" role="dialog" id="incoming-message-modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Message from <span class="message-from">Anonymous</span></h4>
+            </div>
+            <div class="modal-body">
+                <p><span class="message-text"></span></p>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<!-------------------------------------------
+    WELCOME MESSAGE
+-------------------------------------------->
+<div id="welcome-message">
+    <div class="row top-menubar invisible">
+        <div class="col-lg-3 col-lg-9">
+            <span id="welcome-time">6:00</span> | BONJOUR PIERRE
+        </div>
+        <!--
+        <div class="col-lg-1 col-lg-offset-11 spotify-section">
+            <div class="icon-spotify"></div>
+        </div>
+        -->
+    </div>
+</div>
+
+
+<!-------------------------------------------
+SLEEP SCREEN
+-------------------------------------------->
+<div id="first" class="fadeout">
+    <!-- Page Content -->
+    <div class="container-fluid">
+
+        <div class="row ">
+            <div class="standby-container">
+                <div class="col-lg-6">
+                    <div id="standby-date1" class="standby-date">
+                        <div class="vertical_line"></div>
+                        <div class="day">MARDI</div>
+                        <div class="day_of_month">28</div>
+                        <div class="month">MARS</div>
+                        <div class="temp_wrapper">
+                            <div class="temperature"><span class="temperature-placeholder">0</span>&deg;</div>
+                            <canvas id="weather-icon" class="weather_icon" width="92" height="92"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div id="standby-time" class="standby_time">
+                        <div id="currentTime">13:52</div>
+                    </div>
+                    <div id="standby-alarm-events" class="standby_alarm_events">
+                        <div id="coffee_brewing_status">
+                                <ul class="icon-coffee fadeout">
+                                    <li class="">Caf&eacute;</li>
+                                </ul>
+                            </div>
+                        <div id="blinds_status">
+                            <ul class="icon-blinds fadeout">
+                                <li class="">Stores</li>
+                            </ul>
+                        </div>
+                        <div id="spotify-playing-status">
+                            <ul class="icon-spotify fadeout">
+                                <li class="">Spotify</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
+
+<!-------------------------------------------
+DASHBOARD - AGENDA
+-------------------------------------------->
+<div id="second" class="fadeout hidden">
+    <!-- Page Content -->
+
+    <!-- Page Content -->
+    <div class="container-fluid">
+        <div class="row ">
+            <div class="agenda-container">
+                <div class="col-lg-6">
+                    <div id="agenda-date" class="agenda-date">
+                        <div class="vertical_line"></div>
+                        <div class="day">MARDI</div>
+                        <div class="day_of_month">28</div>
+                        <div class="month">MARS</div>
+                        <div class="temp_wrapper">
+                            <div class="temperature"><span class="temperature-placeholder">0</span>&deg;</div>
+                            <canvas id="weather-icon-2" class="weather_icon" width="92" height="92"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div id="agenda-title" class="agenda_title">
+                        AGENDA
+                    </div>
+
+                    <div id="marqueecontainer" onMouseover="" onMouseout="copyspeed=marqueespeed">
+                        <div id="vmarquee" style="position: absolute; width: 98%;">
+
+                            <!--YOUR SCROLL CONTENT HERE-->
+
+                            <ul>
+                                <li>
+                                    <span class="agenda-time"><span class="invisible">0</span>9:00</span>
+                                    <span class="agenda-description"> R&Eacute;UNION CAF&Eacute;</span>
+                                </li>
+                                <li>
+                                    <span class="agenda-time">10:00</span>
+                                    <span class="agenda-description"> APPEL CONF&Eacute;RENCE</span>
+                                </li>
+                                <li>
+                                    <span class="agenda-time">12:00</span>
+                                    <span class="agenda-description"> LUNCH AU RESTAURANT</span>
+                                </li>
+                                <li>
+                                    <span class="agenda-time">14:00</span>
+                                    <span class="agenda-description"> APPEL CONF&Eacute;RENCE</span>
+                                </li>
+                                <li>
+                                    <span class="agenda-time">16:00</span>
+                                    <span class="agenda-description"> APPEL CONF&Eacute;RENCE</span>
+                                </li>
+                                <li>
+                                    <span class="agenda-time">17:00</span>
+                                    <span class="agenda-description"> ENTRA&Icirc;NEMENT TENNIS</span>
+                                </li>
+                                <li><span class="agenda-time">19:00</span>
+                                    <span class="agenda-description"> 5 &Aacute; 7 DANS LE VIEUX</span>
+                                </li>
+                                <li>
+                                    <span class="agenda-time">22:00</span>
+                                    <span class="agenda-description"> APPEL INTERNATIONAL</span>
+                                </li>
+                            </ul>
+
+
+
+
+
+
+
+
+                            <!--YOUR SCROLL CONTENT HERE-->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div><!-- /.container -->
+
+
+</div>
+
+
+<!-------------------------------------------
+MEDIA FIRST GENERATION X
+-------------------------------------------->
+<div id="third" class="hidden fadeout">
+    <!-- Page Content -->
+    <div class="container-fluid">
+        <div class="col-lg-12 col-md-10 ">
+            <div class="cover-container">
+                <!-- START PANEL -->
+                <div id="cover1"  class="cover-item first-cover">
+                    <div class="overlay"></div>
+                    <div class="metadata">EN DIRECT | LES AFFAIRES</div>
+                    <div class="title">&Eacute;CHEC DE TRUMPCARE: CE N'EST PAS LA FIN DU MONDE</div>
+                    <video loop muted autoplay poster="" class="cover-video">
+                        <source src="videos/4torres_vert_4k.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div id="cover2"  class="cover-item">
+                    <div class="overlay"></div>
+                    <div class="metadata">EN DIRECT | TVA - CANOE</div>
+                    <div class="title">CIRCULATION ET CONDITIONS ROUTI&Egrave;RES</div>
+                    <video loop muted autoplay poster="" class="cover-video">
+                        <source src="videos/snow_path_walker_vertical.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div id="cover3"  class="cover-item">
+                    <div class="overlay"></div>
+                    <div class="metadata">34h18 | &Eacute;L&Eacute;PHANT</div>
+                        <div class="title bottom-title">L&Eacute;OLO</div>
+                        <div class="sub-title bottom-subtitle">1992 | FR</div>
+                    <div class="cover-image">
+                        <img class="leolo-img" src="img/news/3_LEOLO_.jpg">
+                    </div>
+                </div>
+
+                <div id="cover4"  class="cover-item">
+                    <div class="metadata">1h30 | INSTAGRAM</div>
+                    <div class="title bottom-title"></div>
+                    <div class="sub-title bottom-subtitle">#reposm&eacute;rit&eacute;</div>
+                    <div class="cover-image">
+                        <img class="instagram-img" src="img/news/instagram_bg.png">
+                    </div>
+                </div>
+
+                <div id="cover5"  class="cover-item">
+                    <div class="overlay"></div>
+                    <div class="metadata">2h+ | TVA SPORTS</div>
+                    <div class="title bottom-title">DET-MTL</div>
+                    <div class="sub-title bottom-subtitle">21 MARS</div>
+                    <div class="cover-image">
+                        <img class="nhl-img" src="img/news/CAR@MTL.png">
+                    </div>
+                </div>
+
+                <div id="cover6"  class="cover-item">
+                    <div class="overlay"></div>
+                    <div class="metadata">CARNET DE BORD | CAA QC</div>
+                    <div class="title bottom-title">ESCAPADES</div>
+                    <div class="sub-title bottom-subtitle"></div>
+                    <div class="cover-image">
+                        <img class="instagram-img" src="img/news/travel.png">
+                    </div>
+                </div>
+
+                <div id="cover7"  class="cover-item">
+                    <div class="overlay"></div>
+                </div>
+
+                <div id="cover8"  class="cover-item">
+                    <div class="overlay"></div>
+                </div>
+
+                <div id="cover9"  class="cover-item">
+                    <div class="overlay"></div>
+                </div>
+
+                <div id="cover10" class="cover-item last-cover">
+                    <div class="overlay"></div>
+                </div>
+                <!-- END PANEL -->
+            </div>
+        </div>
+    </div>
+
+</div>  <!-- END: id="third" -->
+
+<!-------------------------------------------
+IOT BAR
+-------------------------------------------->
+<div class="row iot-icons invisible">
+    <div class="col-md-3 text-center">
+        <ul class="icon-tesla">
+            <li>TESLA</li>
+            <li class=""><span class="tesla-status-placeholder">88</span>% CHARGED</li>
+        </ul>
+    </div>
+    <div class="col-md-3 text-center">
+        <ul class="icon-nest">
+            <li class=""><span class="nest-temp-placeholder">18</span>&deg;</li>
+            <li class=""><span class="energy-saving-placeholder"></span></li>
+        </ul>
+    </div>
+
+    <div class="col-md-3 text-center">
+        <ul class="icon-coffee">
+            <li>COFFEE</li>
+            <li class=""><span class="coffee-status-placeholder">OFF</span></li>
+        </ul>
+    </div>
+
+    <div class="col-md-3 text-center">
+        <ul class="icon-blinds">
+            <li>BLINDS</li>
+            <li class=""><span class="blinds-status-placeholder">DOWN</span></li>
+        </ul>
+    </div>
+</div>
+
+
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="js/mqttws31.js" type="text/javascript"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/skycons.js"></script>
+
+<script src="js/mfscript.js"></script>
+<script src="js/playlist.js"></script>
+<script src="js/scrollingtext.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+/*------------------------------------------------
+TOP MENUBAR
+ ------------------------------------------------*/
+.iot-icons {
+}
+
+/*------------------------------------------------
+IOT ICONS
+ ------------------------------------------------*/
+.iot-icons {
+    // position: absolute;
+    // bottom: 0;
+}
+
+.iot-icons ul{
+    padding-top: 13px;
+    margin: auto auto;
+    color: #ffffff;
+}
+
+
+.iot-icons ul li {
+    font-size: 0.5em;
+    font-weight: 700;
+    list-style: none;
+    margin-left: 85px;
+    min-width: 500px;
+    text-align: left;
+}
+
+.iot-icons ul li.status-on {
+    color: #4cae4c;
+}
+
+.icon-spotify {
+    background-image: url(../img/iot/icon_Spotify-128x128.png);
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 64px; /* Or size of icon + spacing */
+    margin-top: 15px;
+    width: 128px;
+    height: 128px;
+}
+
+.icon-spotify-green {
+    background-image: url(../img/iot/icon_Spotify-128x128.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+    width: 128px;
+    height: 128px;
+}
+
+.icon-tesla {
+    background-image: url(../img/iot/icon_tesla-128x128.png);
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 64px; /* Or size of icon + spacing */
+    margin-top: 15px;
+    width: 128px;
+    height: 128px;
+}
+
+.icon-nest {
+    background-image: url(../img/iot/icon_nest-128x128.png);
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 64px; /* Or size of icon + spacing */
+    margin-top: 15px;
+    width: 128px;
+    height: 128px;
+}
+
+
+.icon-coffee {
+    background-image: url(../img/iot/icon_coffee-128x128.png);
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 64px; /* Or size of icon + spacing */
+    margin-top: 15px;
+    width: 128px;
+    height: 128px;
+}
+
+.icon-blinds {
+    background-image: url(../img/iot/icon_blinds-128x128.png);
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 64px; /* Or size of icon + spacing */
+    margin-top: 15px;
+    width: 128px;
+    height: 128px;
+}
+

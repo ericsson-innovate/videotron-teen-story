@@ -1,0 +1,140 @@
+/**
+When removing the fadout class, transition the second screen slowing into opacity
+ */
+
+#second {
+    opacity: 1;
+    transition: 2s opacity;
+}
+
+
+#second.fadeout {
+    opacity: 0;
+    transition: none;
+}
+
+#second .recap-page{
+    color: #ffffff;
+}
+
+
+#second > .container-fluid {
+    padding: 0;
+}
+
+#second > .container-fluid > .col-lg-12.col-md-10 {
+    padding: 0;
+}
+
+
+#second ::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+// background: transparent;  /* optional: just make scrollbar invisible */
+}
+
+#second .agenda-container {
+    height: 1500px;
+    width: 100%;
+    margin-top: 370px;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: 'Montserrat';
+    color: #ffffff;
+}
+
+#second .agenda-container ul li {
+    list-style: none;
+    font-size: 1.6em;
+}
+
+
+#second .agenda-container > .col-lg-6 {
+    right-border: 10px solid #ffffff;
+}
+
+#second .agenda-container .agenda-date {
+    font-size: 2em;
+    line-height: 1.95em;
+    text-align: right;
+    padding-right: 40px;
+}
+
+#second .agenda-container .agenda-date > .vertical_line {
+    position: absolute;
+    width: 99%;
+    height: 87%;
+    top: 108px;
+    border-right: 6px solid #ffffff;
+}
+
+#second .agenda-container .agenda-date > .day_of_month {
+    font-family: "Proxima Nova-ExtraBoldOTF";
+    font-size: 3em;
+    font-weight: bold;
+}
+
+#second .agenda-container .agenda-date > .month {
+    font-size: 1.75em;
+    line-height: 0.95em;
+}
+
+#second .agenda-container .agenda-date > .temp_wrapper {
+    margin-top: 30px;
+}
+
+#second .agenda-container .agenda-date > .temp_wrapper > .temperature {
+    float: right;
+    font-size: 0.65em;
+    line-height: 1.0em;
+}
+
+#second .agenda-container .agenda-date > .temp_wrapper > .weather_icon {
+    float: right;
+    margin-right: 50px;
+}
+
+#second .agenda-container .agenda_title {
+    margin: 0 0 0 50px;
+    font-family: 'Montserrat';
+    text-align: left;
+    font-size: 2em;
+    line-height: 1.95em;
+}
+
+
+#second .agenda-container .agenda-date{
+    opacity: 1;
+    transition: 3s opacity;
+}
+
+#second .agenda-container .agenda-date.fadeout{
+    opacity: 0;
+    transition: none;
+}
+
+#second .agenda-container .agenda-time {
+    font-size: 0.7em;
+    font-family: "Lato Light";
+}
+
+#second .agenda-container .agenda-description {
+    font-size: 0.7em;
+    margin-left: 20px;
+    text-justify: distribute;
+}
+
+#marqueecontainer{
+    position: relative;
+    width: 100%; /*marquee width */
+    height: 600px; /*marquee height */
+    overflow: hidden;
+    padding: 0 0 0 4px;
+}
+
+
+#welcome-message .top-menubar {
+    font-family: 'Montserrat';
+    color: #ffffff;
+    margin-left: 100px;
+    margin-top: 130px;
+}

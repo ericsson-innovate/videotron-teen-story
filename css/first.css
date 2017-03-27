@@ -1,0 +1,182 @@
+#first {
+    opacity: 1;
+    transition: 3s opacity;
+    font-family: 'Lato Bold';
+}
+
+#first.fadeout {
+    opacity: 0;
+    transition: none;
+}
+
+
+
+#first > .container-fluid {
+    padding: 0;
+}
+
+#first > .container-fluid > .col-lg-12.col-md-10 {
+    padding: 0;
+}
+
+
+#first ::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    // background: transparent;  /* optional: just make scrollbar invisible */
+}
+
+#first .standby-container {
+    height: 1500px;
+    width: 100%;
+    margin-top: 370px;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: 'Montserrat';
+    color: #ffffff;
+}
+
+#first .standby-container ul li {
+    list-style: none;
+    font-size: 1.6em;
+}
+
+#first .standby-container > .icon-temperature,
+#first .standby-container > .icon-wind,
+#first .standby-container > .icon-humidity {
+    padding-left: 150px;
+}
+
+#first .standby-container > .col-lg-6 {
+    right-border: 10px solid #ffffff;
+}
+
+#first .standby-container .standby-date {
+    font-size: 2em;
+    line-height: 1.95em;
+    text-align: right;
+    padding-right: 40px;
+}
+
+#first .standby-container .standby-date > .vertical_line {
+    position: absolute;
+    width: 99%;
+    height: 87%;
+    top: 108px;
+    border-right: 6px solid #ffffff;
+}
+
+#first .standby-container .standby-date > .day_of_month {
+    font-family: "Proxima Nova-ExtraBoldOTF";
+    font-size: 3em;
+    font-weight: bold;
+}
+
+#first .standby-container .standby-date > .month {
+    font-size: 1.75em;
+    line-height: 0.95em;
+}
+
+#first .standby-container .standby-date > .temp_wrapper {
+    margin-top: 30px;
+}
+
+#first .standby-container .standby-date > .temp_wrapper > .temperature {
+    float: right;
+    font-size: 0.65em;
+    line-height: 1.0em;
+}
+
+#first .standby-container .standby-date > .temp_wrapper > .weather_icon {
+    float: right;
+    margin-right: 50px;
+}
+
+#first .standby-container .standby_time {
+    margin: 290px 0 0 50px;
+    font-family: 'Proxima Nova-ExtraBoldOTF';
+    font-size: 3em;
+    // line-height: 1.95em;
+    text-align: left;
+    // padding-right: 40px;
+}
+
+
+#first .standby-container .standby_time{
+    opacity: 1;
+    transition: 3s opacity;
+}
+
+#first .standby-container .standby_time.fadeout{
+    opacity: 0;
+    transition: none;
+}
+
+#first .standby-container .standby_time.standby_time_wakeup {
+    margin-top: 0px;
+}
+
+#first .standby-container .standby_alarm_events {
+    margin: 0px 0 0 50px;
+    font-size: 1em;
+    text-align: left;
+}
+
+#first .standby-container .standby_alarm_events ul{
+    padding-top: 13px;
+    color: #ffffff;
+}
+
+
+#first .standby-container .standby_alarm_events ul li {
+    font-size: 1em;
+    font-weight: 700;
+    list-style: none;
+    margin-left: 85px;
+    min-width: 500px;
+    text-align: left;
+}
+
+#first .standby-container .standby_alarm_events ul li.status-on {
+    color: #4cae4c;
+}
+
+
+#first .standby-container .standby_alarm_events ul{
+    opacity: 1;
+    transition: 3s opacity;
+}
+
+#first .standby-container .standby_alarm_events ul.fadeout{
+    opacity: 0;
+    transition: none;
+}
+
+
+
+
+
+
+
+#first .welcome {
+    color: #ffffff;
+}
+
+#first .username-placeholder {
+    font-family: 'Lato Bold';
+}
+
+/**
+When removing the fadout class, transition the username slowing into opacity
+ */
+#first .username-placeholder {
+    opacity: 1;
+    transition: 3s opacity;
+}
+#first .username-placeholder.fadeout {
+    opacity: 0;
+    transition: none;
+}
+
+
+
+

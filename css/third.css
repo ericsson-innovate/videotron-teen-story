@@ -64,7 +64,7 @@
 #third .cover-container > .cover-item:hover,
 #third .cover-container > .cover-item:focus,
 #third .cover-container > .cover-item:active {
-    border-bottom: 15px solid #4ec6ee;
+    // border-bottom: 15px solid #4ec6ee;
     transform: scale(1.05);
 }
 

@@ -75,7 +75,7 @@ When removing the fadout class, transition the second screen slowing into opacit
 
 #second .agenda-container .agenda-date > .month {
     font-size: 1.75em;
-    line-height: 0.95em;
+    line-height: 1.25em;
 }
 
 #second .agenda-container .agenda-date > .temp_wrapper {
@@ -101,6 +101,32 @@ When removing the fadout class, transition the second screen slowing into opacit
     line-height: 1.95em;
 }
 
+#second .agenda-container #vmarquee .notification-wrapper {
+    width: 1450px;
+    height: 140px;
+    margin-top: 40px;
+    font-size: 0.55em;
+    line-height: 1.25em;
+}
+
+#second .agenda-container #vmarquee .notification-icon {
+    width: 150px;
+    height: 140px;
+    float: left;
+    overflow: hidden;
+}
+
+#second .agenda-container #vmarquee .notification-icon > img {
+    float: right;
+}
+
+#second .agenda-container #vmarquee .notification-message {
+    width: 1200px;
+    height: 140px;
+    margin-left: 20px;
+    float: left;
+    overflow: hidden;
+}
 
 #second .agenda-container .agenda-date{
     opacity: 1;
@@ -126,11 +152,20 @@ When removing the fadout class, transition the second screen slowing into opacit
 #marqueecontainer{
     position: relative;
     width: 100%; /*marquee width */
-    height: 600px; /*marquee height */
+    height: 800px; /*marquee height */
     overflow: hidden;
     padding: 0 0 0 4px;
 }
 
+// #marqueecontainer:after {
+//     content:'';
+//     width:100%;
+//     height:100%;    
+//     position:absolute;
+//     left:0;
+//     top:0;
+//     background: -webkit-linear-gradient(top, rgba(0,0,0,0) 1%,rgba(0,0,0,0) 63%,rgba(0,0,0,0.5) 100%);
+// }
 
 #welcome-message .top-menubar {
     font-family: 'Montserrat';

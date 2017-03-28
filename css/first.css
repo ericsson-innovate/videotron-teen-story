@@ -35,6 +35,15 @@
     color: #ffffff;
 }
 
+#first .standby-container .userWrapper {
+    font-size: 2em;
+    margin-left: 20px;
+}
+
+#first .standby-container .userWrapper .highlight {
+    animation: selected-name 0.3s ease 1s forwards;
+}
+
 #first .standby-container ul li {
     list-style: none;
     font-size: 1.6em;
@@ -178,5 +187,21 @@ When removing the fadout class, transition the username slowing into opacity
 }
 
 
+@-webkit-keyframes selected-name {
+  0%   { transform: scale(1.0); transform-origin: 0 0; font-weight: normal; color: #ffffff; }
+  100% { transform: scale(1.15); transform-origin: 0 47px; font-weight: bold; color: #AFDDED; }
+}
+@-moz-keyframes selected-name {
+  0%   { transform: scale(1.0); transform-origin: 0 0; font-weight: normal; color: #ffffff; }
+  100% { transform: scale(1.15); transform-origin: 0 47px; font-weight: bold; color: #AFDDED; }
+}
+@-o-keyframes selected-name {
+  0%   { transform: scale(1.0); transform-origin: 0 0; font-weight: normal; color: #ffffff; }
+  100% { transform: scale(1.15); transform-origin: 0 47px; font-weight: bold; color: #AFDDED; }
+}
+@keyframes selected-name {
+  0%   { transform: scale(1.0); transform-origin: 0 0; font-weight: normal; color: #ffffff; }
+  100% { transform: scale(1.15); transform-origin: 0 47px; font-weight: bold; color: #AFDDED; }
+}
 
 

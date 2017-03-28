@@ -109,7 +109,7 @@ INCOMING MESSAGE MODAL
 <div id="welcome-message">
     <div class="row top-menubar invisible">
         <div class="col-lg-3 col-lg-9">
-            <span id="welcome-time">6:00</span> | BONJOUR PIERRE
+            <span id="welcome-time">6:00</span> | Salut William
         </div>
         <!--
         <div class="col-lg-1 col-lg-offset-11 spotify-section">
@@ -121,7 +121,7 @@ INCOMING MESSAGE MODAL
 
 
 <!-------------------------------------------
-SLEEP SCREEN
+STANDBY SCREEN
 -------------------------------------------->
 <div id="first" class="fadeout">
     <!-- Page Content -->
@@ -143,32 +143,17 @@ SLEEP SCREEN
                 </div>
 
                 <div class="col-lg-6">
-                    <div id="standby-time" class="standby_time">
-                        <div id="currentTime">13:52</div>
-                    </div>
-                    <div id="standby-alarm-events" class="standby_alarm_events">
-                        <div id="coffee_brewing_status">
-                                <ul class="icon-coffee fadeout">
-                                    <li class="">Caf&eacute;</li>
-                                </ul>
-                            </div>
-                        <div id="blinds_status">
-                            <ul class="icon-blinds fadeout">
-                                <li class="">Stores</li>
-                            </ul>
-                        </div>
-                        <div id="spotify-playing-status">
-                            <ul class="icon-spotify fadeout">
-                                <li class="">Spotify</li>
-                            </ul>
-                        </div>
+                    <div class="userWrapper">
+                        <ul>
+                            <li>JULIETTE</li>
+                            <li>THEO</li>
+                            <li class="highlight">WILLIAM</li>
+                            <li>PALOMA</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-
         </div>
-
-
     </div>
 </div>
 
@@ -198,7 +183,7 @@ DASHBOARD - AGENDA
 
                 <div class="col-lg-6">
                     <div id="agenda-title" class="agenda_title">
-                        AGENDA
+                        REMINDERS
                     </div>
 
                     <div id="marqueecontainer" onMouseover="" onMouseout="copyspeed=marqueespeed">
@@ -208,35 +193,28 @@ DASHBOARD - AGENDA
 
                             <ul>
                                 <li>
-                                    <span class="agenda-time"><span class="invisible">0</span>9:00</span>
-                                    <span class="agenda-description"> R&Eacute;UNION CAF&Eacute;</span>
-                                </li>
-                                <li>
-                                    <span class="agenda-time">10:00</span>
-                                    <span class="agenda-description"> APPEL CONF&Eacute;RENCE</span>
-                                </li>
-                                <li>
-                                    <span class="agenda-time">12:00</span>
-                                    <span class="agenda-description"> LUNCH AU RESTAURANT</span>
-                                </li>
-                                <li>
-                                    <span class="agenda-time">14:00</span>
-                                    <span class="agenda-description"> APPEL CONF&Eacute;RENCE</span>
-                                </li>
-                                <li>
-                                    <span class="agenda-time">16:00</span>
-                                    <span class="agenda-description"> APPEL CONF&Eacute;RENCE</span>
+                                    <!-- <span class="agenda-time"><span class="invisible">0</span>9:00</span> -->
+                                    <span class="agenda-description"> MOM IN PARIS</span>
                                 </li>
                                 <li>
                                     <span class="agenda-time">17:00</span>
-                                    <span class="agenda-description"> ENTRA&Icirc;NEMENT TENNIS</span>
-                                </li>
-                                <li><span class="agenda-time">19:00</span>
-                                    <span class="agenda-description"> 5 &Aacute; 7 DANS LE VIEUX</span>
+                                    <span class="agenda-description"> HOCKEY PRACTICE</span>
                                 </li>
                                 <li>
-                                    <span class="agenda-time">22:00</span>
-                                    <span class="agenda-description"> APPEL INTERNATIONAL</span>
+                                    <div class="notification-wrapper">
+                                        <div class="notification-icon"><img src="img/mail_Icon_alert.png" alt=""></div>
+                                        <div class="notification-message">
+                                            From Mom: <br>Don't forget gear for hockey
+                                        </div>    
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="notification-wrapper">
+                                        <div class="notification-icon"><img src="img/battery_empty_alert.png" alt=""></div>
+                                        <div class="notification-message">
+                                            Phone battery is at 20%<br>Charge phone
+                                        </div>    
+                                    </div>
                                 </li>
                             </ul>
 

@@ -18,7 +18,7 @@
     white-space: nowrap;
     overflow-x: scroll;
     overflow-y: hidden;
-    font-family: "Proxima Nova-ExtraBoldOTF";
+    // font-family: "Proxima Nova ExtraBold";
 }
 
 #third .cover-container > .cover-item {

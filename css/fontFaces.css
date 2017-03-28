@@ -1,3 +1,77 @@
+// *** Proxima Nova ***
+@font-face {
+    font-family: 'Proxima Nova Black';
+    src: url(../fonts/ProximaNova/ProximaNova-Black.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Proxima Nova Black-Italic';
+    src: url(../fonts/ProximaNova/ProximaNova-BlackIt.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Proxima Nova Bold';
+    src: url(../fonts/ProximaNova/ProximaNova-Bold.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Proxima Nova Bold-Italic';
+    src: url(../fonts/ProximaNova/ProximaNova-BoldIt.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Proxima Nova Light';
+    src: url(../fonts/ProximaNova/ProximaNova-Light.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Proxima Nova Light-Italic';
+    src: url(../fonts/ProximaNova/ProximaNova-LightIt.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Proxima Nova Regular';
+    src: url(../fonts/ProximaNova/ProximaNova-Reg.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Proxima Nova Regular-Italic';
+    src: url(../fonts/ProximaNova/ProximaNova-RegIt.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Proxima Nova SemiBold';
+    src: url(../fonts/ProximaNova/ProximaNova-Sbold.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Proxima Nova SemiBold-Italic';
+    src: url(../fonts/ProximaNova/ProximaNova-SboldIt.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Proxima Nova Thin';
+    src: url(../fonts/ProximaNova/ProximaNova-Thin.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Proxima Nova Thin-Italic';
+    src: url(../fonts/ProximaNova/ProximaNova-ThinIt.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Proxima Nova ExtraBold';
+    src: url(../fonts/ProximaNova/ProximaNova-Xbold.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Proxima Nova ExtraBold-Italic';
+    src: url(../fonts/ProximaNova/ProximaNova-XboldIt.otf) format('opentype');
+}
+
+
+
+
 // *** Lato ***
 @font-face {
     font-family: 'Lato Black';
@@ -53,12 +127,12 @@
 // *** Proxima
 @font-face {
     font-family: 'Proxima Nova-ExtraBold';
-    src: url(../fonts/Proxima/ProximaNova-Extrabld.ttf) format('truetype');
+    src: url(../fonts/ProximaNova/ProximaNova-Extrabld.ttf) format('truetype');
 }
 
 @font-face {
     font-family: 'Proxima Nova-ExtraBoldOTF';
-    src: url(../fonts/Proxima/ProximaNova-Extrabld.otf) format('opentype');
+    src: url(../fonts/ProximaNova/ProximaNova-Extrabld.otf) format('opentype');
 }
 
 

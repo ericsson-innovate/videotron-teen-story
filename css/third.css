@@ -109,6 +109,9 @@
 #third .cover-container > .cover-item > .cover-image img.nhl-img {
     top: 80px;
     left: -1020px;
+    transform: scale(1.2, 1.2);
+    -ms-transform: scale(1.2, 1.2);
+    -webkit-transform: scale(1.2, 1.2);
 }
 
 #third .cover-container > .cover-item .metadata{
@@ -144,7 +147,6 @@
     top: 1250px;
     font-size: 1.5em;
 }
-
 
 #third .cover-container > #cover4.cover-item .title.bottom-title {
     font-family:"Proxima Nova-ExtraBoldOTF";

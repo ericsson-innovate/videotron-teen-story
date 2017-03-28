@@ -11,7 +11,7 @@ var tesla_status = 88;
 var t_tesla;//charging interval
 
 function MQTTconnect() {
-    mqtt = new Paho.MQTT.Client("52.207.31.245", 9001, "client-teen-MF-X-1");
+    mqtt = new Paho.MQTT.Client("52.207.31.245", 9001, "client-teen-MF-X-thao-10");
 
     mqtt.onConnectionLost = onConnectionLost;
     mqtt.onMessageArrived = onMessageArrived;
@@ -137,18 +137,13 @@ function onMessageArrived(message) {
     }
     else if (topic == "/vsmarthome/notify/message") {
         console.log("message", payload);
+        $("#message-sound")[0].load();
+        $("#message-sound")[0].volume = 0.5;
+        $("#message-sound")[0].play();
 
         var message = payload.split("/");
         var text = message[0]
         var from = message[1];
-
-        $(".message-from").html(from);
-        $(".message-text").html(text);
-        $('#incoming-message-modal').modal('show');
-
-        setTimeout( function() {
-            $('#incoming-message-modal').modal('hide');
-        }, 3000);
     }
     else if (topic == "/vsmarthome/notify/show_news") {
         console.log("show news, payload");

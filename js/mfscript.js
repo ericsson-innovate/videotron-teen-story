@@ -11,7 +11,7 @@ var tesla_status = 88;
 var t_tesla;//charging interval
 
 function MQTTconnect() {
-    mqtt = new Paho.MQTT.Client("52.207.31.245", 9001, "clientId");
+    mqtt = new Paho.MQTT.Client("52.207.31.245", 9001, "client-teen-MF-X-1");
 
     mqtt.onConnectionLost = onConnectionLost;
     mqtt.onMessageArrived = onMessageArrived;
@@ -73,8 +73,13 @@ function onMessageArrived(message) {
     //A presence has been notified
     else if (topic == "/vsmarthome/notify/presence") {
         presence_name = payload;
-        playWakeupSound();
-        switchToDashboard();
+        $("#first .william").addClass("highlight");
+        setTimeout(function() {
+            playWakeupSound();
+            switchToDashboard();
+        }, 2000);
+
+
     }
     //A change in the Tesla battery status has been notified
     else if (topic == "/vsmarthome/notify/tesla") {
@@ -655,6 +660,7 @@ var openBlinds = function() {
 var playWakeupSound = function () {
     console.log("Play Wakeupt Sound");
     $("#wakeup-sound")[0].load();
+    $("#wakeup-sound")[0].volume = 0.1;
     $("#wakeup-sound")[0].play();
 }
 /**
@@ -665,5 +671,6 @@ var playGoodbyeSound = function () {
     audio = $('audio');
     audio[0].pause();
     $("#goodbye-sound")[0].load();
+    $("#goodbye-sound")[0].volume = 0.1;
     $("#goodbye-sound")[0].play();
 }

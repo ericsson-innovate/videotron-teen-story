@@ -119,6 +119,7 @@
 }
 
 #third .cover-container > .cover-item .title{
+    font-family:"Proxima Nova-ExtraBoldOTF";
     position: absolute;
     top: 850px;
     margin-left: 50px;
@@ -128,10 +129,33 @@
     white-space: normal;
 }
 
-#third .cover-container > .cover-item .title.bottom-title {
+#third .cover-container > #cover1.cover-item .title.bottom-title {
+    font-family:"Proxima Nova-ExtraBoldOTF";
+    top: 1250px;
+    font-size: 1.5em;
+}
+#third .cover-container > #cover2.cover-item .title.bottom-title {
+    font-family:"Proxima Nova-ExtraBoldOTF";
+    top: 1100px;
+    font-size: 1.5em;
+}
+#third .cover-container > #cover3.cover-item .title.bottom-title {
+    font-family:"Proxima Nova-ExtraBoldOTF";
+    top: 1250px;
+    font-size: 1.5em;
+}
 
-    top: 1240px;
-    font-size: 115px;
+
+#third .cover-container > #cover4.cover-item .title.bottom-title {
+    font-family:"Proxima Nova-ExtraBoldOTF";
+    top: 1100px;
+    font-size: 1.5em;
+}
+
+#third .cover-container > #cover5.cover-item .title.bottom-title {
+    font-family:"Proxima Nova-ExtraBoldOTF";
+    top: 1250px;
+    font-size: 1.5em;
 }
 
 #third .cover-container > .cover-item .sub-title{
